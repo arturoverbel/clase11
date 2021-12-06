@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.sendFile('index.html', { root: __dirname })
 });
 
-httpServer.listen(3000, () => {
+httpServer.listen(process.env.PORT || 3000, () => {
     console.log("SERVER ON");
 })
 
